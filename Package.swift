@@ -1,15 +1,12 @@
-// swift-tools-version: 5.10
-// The swift-tools-version declares the minimum version of Swift required to build this package.
-
 import PackageDescription
 
 let package = Package(
-    name: "tests",
+    name: "main project",
     platforms: [
-        .macOS(.v10_15) // Adjust based on your requirements
+        .macOS(.v10_15) 
     ],
     dependencies: [
-        .package(url: "https://github.com/apple/swift-syntax.git", branch: "main") // Ensure this matches your Swift version
+        .package(url: "https://github.com/apple/swift-syntax.git", branch: "main") 
     ],
     targets: [
         .executableTarget(
@@ -18,7 +15,7 @@ let package = Package(
                 .product(name: "SwiftSyntax", package: "swift-syntax"),
                 .product(name: "SwiftParser", package: "swift-syntax"),
             ],
-            path: "Sources"
+            path: "Sources/tests"
         ),
     ]
 )

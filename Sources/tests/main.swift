@@ -1,10 +1,9 @@
 // The Swift Programming Language
 // https://docs.swift.org/swift-book
 
-import Foundation
-import SwiftParser
+import Foundation 
+import SwiftParser 
 import SwiftSyntax
-
 
 class MethodVisitor: SyntaxVisitor {
     var methods: [String] = []
